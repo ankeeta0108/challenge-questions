@@ -1,0 +1,17 @@
+Steps to retrieve AWS ec2-instance metadata
+
+1. SSH into the ec2-instance.
+2. To view all categories of instance metadata from within a running instance, use the following IPv4  -
+curl http://169.254.169.254/latest/meta-data/
+
+3. To get the available versions of instance metadata-
+curl http://169.254.169.254/
+
+4. To get top level metadata items-
+curl http://169.254.169.254/latest/meta-data/ 
+
+5. To get values of metadata items- curl http://169.254.169.254/latest/meta-data/<metadata category>
+Eg- curl http://169.254.169.254/latest/meta-data/local-hostname
+
+6. To retrieve dynamic metadata- 
+curl http://169.254.169.254/latest/dynamic/
